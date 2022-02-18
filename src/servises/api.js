@@ -39,7 +39,6 @@ export const getOneMovieByIdAPI = (id) => {
     include_adult: false,
   }
    return axios.get("search/movie").then(res => {
-     console.log(res.data.results)
      return res.data.results
   })
 }

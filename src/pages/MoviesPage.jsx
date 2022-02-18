@@ -1,4 +1,5 @@
 import qs from "query-string"
+import { useEffect } from "react"
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
 import { useLocation } from "react-router-dom"
@@ -22,11 +23,15 @@ const MoviesPage = () => {
     e.preventDefault()
     if (!input) return
     history.push({ pathname: "/movies", search: "?query=" + input })
+    
+  }
+
+  useEffect(() => {
     query &&
       getMoviesListBySearchAPI(query).then((data) => {
         setMovieList(data)
       })
-  }
+  }, [query])
 
   return (
     <>

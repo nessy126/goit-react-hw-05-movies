@@ -12,8 +12,7 @@ useEffect(() => {
     })
     .catch((err) => console.log(err))
   }, [])
-  
-  console.log(casts)
+
   return (
     <>
       <ul>

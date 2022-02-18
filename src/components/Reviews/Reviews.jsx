@@ -6,13 +6,11 @@ const Reviews = ({id}) => {
 
   useEffect(() => {
     getReviewsByIdAPI(id).then((data) => {
-      console.log(data)
       setReviews(data)
     })
     .catch(err => console.log(err))
   }, [])
 
-  console.log(reviews)
   return (
     <>
       {reviews?.length === 0 ? (
