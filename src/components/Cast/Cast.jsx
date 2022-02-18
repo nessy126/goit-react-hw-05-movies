@@ -19,7 +19,7 @@ useEffect(() => {
         {casts?.map(author => {
           return (
             <li key={author.id}>
-              <img src={imgUrl + author.profile_path} alt="" width="150px"/>
+              <img src={ author.profile_path && imgUrl + author.profile_path} alt="" width="150px"/>
               <p>{author.original_name}</p>
               <p>Character: {author.character}</p>
             </li>

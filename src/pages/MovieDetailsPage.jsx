@@ -35,7 +35,11 @@ const MovieDetailsPage = () => {
     <>
       <BtnGoBack />
       <div style={oneMovie}>
-        <img src={imgUrl + movie?.poster_path} alt="" width="20%" />
+        <img
+          src={movie.poster_path && imgUrl + movie.poster_path}
+          alt=""
+          width="20%"
+        />
         <div style={textOfMovie}>
           <h2>{movie.title}</h2>
           <p>User Score {movie.vote_averag}</p>

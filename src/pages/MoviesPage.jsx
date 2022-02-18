@@ -23,7 +23,7 @@ const MoviesPage = () => {
     e.preventDefault()
     if (!input) return
     history.push({ pathname: "/movies", search: "?query=" + input })
-    
+
   }
 
   useEffect(() => {
